@@ -2,11 +2,16 @@
 
 const sumAll = function (lowest, highest) {
   let result = 0;
-    if lowest > highest {
-   let temp = highest
+  if (lowest < 0 || highest < 0) {
+    return "ERROR";
+  } else if (typeof lowest != "number" || typeof highest != "number") {
+    return "ERROR";
+  } else if (lowest > highest) {
+    let temp = highest;
     highest = lowest;
-   lowest = temp;
-     }
+    lowest = temp;
+  }
+
   for (let i = lowest; i <= highest; i++) {
     result += i;
   }
