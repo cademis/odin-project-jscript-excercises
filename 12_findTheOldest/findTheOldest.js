@@ -30,5 +30,16 @@ const findTheOldest = function (data) {
 
 console.log(findTheOldest(people));
 
+// round all the values and get the sum
+const numbers = [15.5, 2.3, 1.1, 4.7];
+
+let sumAll = (obj, cur) => {
+  return obj + Math.round(cur);
+};
+
+let result = numbers.reduce(sumAll, 0);
+
+console.log(result);
+
 // Do not edit below this line
 module.exports = findTheOldest;
